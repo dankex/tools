@@ -1,0 +1,10 @@
+To add the module to an Android kernel, one can copy the following files
+to a kernel subdirectory, and modify its Makefile accordingly.
+
+Copy the following files into a kernel subdirectory  
+   wake_latency_device.h
+   wake_latency.h
+   wake_latency.c
+
+Modify the Makefile to include it
+  obj-y += wake_latency.o

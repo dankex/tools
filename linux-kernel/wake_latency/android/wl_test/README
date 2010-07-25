@@ -1,0 +1,10 @@
+To build the front-end on Android, one can use the following
+Android.mk and copy the rest files from the upper directory
+
+List of files needed to build:
+
+Android.mk 		Android makefile
+wl_test.c		copy from upper directory
+wake_latency_device.h	copy from upper directory
+
+

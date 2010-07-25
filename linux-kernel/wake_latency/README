@@ -1,0 +1,43 @@
+wake_latency 
+=============
+
+This kernel module is used to measure the wake-up latency for various 
+kernel tasks -- including a kernel thread, a tasklet, a workqueue task, 
+and so on.
+
+The front-end test tool for this module is wl_test.c. It allows some 
+setup of background cpu load, and tests the latencies of the kernel 
+tasks. Each test is repeated N times. The avg and max latencies are 
+reported. For each iteration, the kernel module registers the current 
+time at microsecond resolution, triggers the to-be-tested task (either
+by initializing or waking it up). When the task is running, it will 
+record the new time. Ther module will keep stastistics of the latencies.
+
+The userspace front-end wl_test.c will use the module's interface
+/dev/wake_latency to do the tests, and it will also run a userspace 
+thread to compare kernel space vs. userspace response latencies.
+
+INSTALL
+=======
+
+Run make under the directory to build the kernel module (wake_latency.ko)
+and the user space tool (wl_test).
+  $ make
+
+To clean the directory
+  $ make clean
+
+To load the kernel modules
+  # insmod wake_latency.ko
+
+To run a test
+  # ./wl_test <N>
+where <N> is the number of additional threads to be run to perform the test
+under extra CPU load.
+
+Android port
+============
+
+The source code can also be ported to Android. Instructions are
+in the android directory.
+
