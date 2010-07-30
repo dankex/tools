@@ -1,0 +1,63 @@
+VNC server for Android
+======================
+
+A simple vnc server based on libvncserver.  
+
+Started with original fbvncserver for the iPAQ and Zaurus.
+	http://fbvncserver.sourceforge.net/
+
+Modified by Jim Huang <jserv.tw@gmail.com>
+	- Simplified and sizing down
+	- Performance tweaks
+
+Modified by Steve Guo (letsgoustc)
+ 	- Added keyboard/pointer input
+
+Modified by Danke Xie (danke.xie@gmail.com)
+	- Added input device search to support different devices
+	- Some code clean-up
+
+
+QUICK INSTALL
+=============
+
+Copy the directory fbvncserver to any Android build directory, run
+a build command from Android root
+  $ make -j4 fbvncserver
+
+Push the binary to the device/emulator
+  $ adb push system/bin/fbvncserver /data/
+  
+Modify file permission and run
+  $ adb shell
+  # cd /data
+  # chmod 777 fbvncserver
+  # ./fbvncserver
+  
+
+INPUT SUPPORT
+=============
+
+After Steve Guo's modifications, the fbvncserver can forward input events
+from the VNC client to Android. The way it works is converting VNC input
+events to keyboard and touchscreen events and send to the input devices
+/dev/input/event<N>. 
+
+In this verison, some modifications are added to automatically determine
+the <N> values of the keyboard and touchscreen devices. It enumerates the
+input devices /device/input/event<N>, and matches the reported device name
+against a list of keywords in fbvncserver.c. For example,
+
+static const char *KBD_PATTERNS[] = {"key", "qwerty", NULL};
+static const char *TOUCH_PATTERNS[] = {"touch", "qwerty", NULL};
+
+Devices containing the strings in KBD_PATTERNS are recognized as the keyboard,
+and those containing strings in TOUCH_PATTERNS are recognized as the touchpad.
+
+If a matched device is not found, the default input device names are used, or
+the user can specify by the command line:
+	
+	-k <keyboard-device-path>
+	-t <touchpad-device-path>
+	
+Information about the input devices can be found in /proc/bus/input/devices.
