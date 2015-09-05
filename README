@@ -2,10 +2,12 @@ README
 =======
 
 This git directory contains miscellaneous tools for Linux and Android.
-More details can be found in the subdirectories.
 
 tools
   linux_kernel
     wake_latency        -- kernel task latency test tool
-
+  android
+    fbvncserver         -- fast vnc server for android
+    callstack           -- tool to print callstack in native code
+    
 Thanks!
