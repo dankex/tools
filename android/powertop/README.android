@@ -1,0 +1,15 @@
+The upstream powertop android support is pretty broken currently.  Changes here
+fix it.  They include:
+
+major changes:
+- Android.mk fixes for our libraries, and various file issues
+- don't use i18n
+- don't use C++ try/catch
+- mbstowcs() call acts differently, postpend some space in a different way
+
+couple other minor tweaks for android differences.
+
+also have to create css.h when updating upstream, like:
+cd src
+./csstoh.sh powertop.css css.h
+
