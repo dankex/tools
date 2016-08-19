@@ -1,0 +1,310 @@
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">
+<html>
+<head>
+<title>PowerTOP report</title>
+<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">
+<script type='text/javascript'>
+
+var powertop = {
+ blocks: {
+  system: 'System Info',
+  summary: 'Summary',
+  cpuidle: 'CPU Idle',
+  cpufreq: 'CPU Frequency',
+  software: 'Software Info',
+  device: 'Device Info',
+  tuning: 'Tuning'
+ },
+ cadd: function(idx, c){
+   var el = document.getElementById(idx);
+   if (el) {
+      var cn = el.className;
+      if (cn.indexOf(c) != -1)
+         return;
+      cn += ' ' + c;
+      el.className = cn;
+   }
+ },
+ crm: function(id, c){
+   var el = document.getElementById(id);
+   if (el) {
+      var cn = el.className
+      while (cn.indexOf(' ' + c) != -1)
+         cn = cn.replace(' ' + c,'');
+      el.className = cn;
+   }
+ },
+ newbutton: function(id, txt) {
+  var x = document.createElement('div');
+  x.id = id + '_button';
+  x.className = 'nav_button';
+  x.textContent = txt;
+  x.innerText = txt;
+  x.onclick = function() { powertop.toggle(id); };
+  return x;
+ },
+ setupbuttons: function() {
+   var t = document.getElementById('top');
+   if (t) {
+     for (var b in powertop.blocks) {
+       t.appendChild(powertop.newbutton(b, powertop.blocks[b]));
+     }
+    t.appendChild(powertop.newbutton('all', 'All'));
+   }
+ },
+ toggle: function(b) {
+   powertop.baseall();
+   if (b == 'all') {
+      for (var c in powertop.blocks) {
+        powertop.crm(c, 'hide');
+      }
+   } else {
+      powertop.crm(b, 'hide');
+   }
+   powertop.cadd(b + '_button', 'pressed');
+ },
+ baseall: function() {
+   for (var b in powertop.blocks) {
+     powertop.cadd(b, 'hide');
+     powertop.crm(b + '_button', 'pressed');
+   }
+   powertop.cadd('all', 'hide');
+   powertop.crm('all_button', 'pressed');
+ },
+ onload: function() {
+   powertop.setupbuttons();
+   powertop.toggle('summary');
+ }
+}
+
+</script>
+<style type='text/css'>
+table
+{
+	background-color: #F8F8F8;
+	color: black;
+}
+
+th
+{
+	text-align: right;
+}
+th.device
+{
+	text-align: left;
+}
+th.process
+{
+	text-align: left;
+}
+
+th.tunable
+{
+	text-align: left;
+}
+
+td.package_odd
+{
+	background-color: #E0ffE0;
+	color: black;
+	text-align: right;
+}
+td.package_even
+{
+	background-color: #F0ffF0;
+	color: black;
+	text-align: right;
+}
+
+td.core_even
+{
+	background-color: #F0ffF0;
+	color: black;
+	text-align: right;
+}
+
+td.core_odd
+{
+	background-color: #E0E0ff;
+	color: black;
+	text-align: right;
+}
+
+td.cpu_even_freq
+{
+	background-color: #E2E2E2;
+	color: black;
+}
+
+td.cpu_odd_freq
+{
+	background-color: #F4f4F4;
+	color: black;
+}
+
+td.cpu_even_even
+{
+	background-color: #E0E0f0;
+	color: black;
+	text-align: right;
+}
+
+td.cpu_even_odd
+{
+	background-color: #F0f0F0;
+	color: black;
+	text-align: right;
+}
+td.cpu_odd_even
+{
+	background-color: #E0E0ff;
+	color: black;
+	text-align: right;
+}
+
+td.cpu_odd_odd
+{
+	background-color: #F0ffF0;
+	color: black;
+	text-align: right;
+}
+
+tr.device_odd
+{
+	background-color: #E0E0E0;
+	color: black;
+}
+tr.device_even
+{
+	background-color: #F0f0F0;
+	color: black;
+}
+
+tr.process_odd
+{
+	background-color: #E0E0E0;
+	color: black;
+}
+tr.process_even
+{
+	background-color: #F0f0F0;
+	color: black;
+}
+
+td.device_power
+{
+	text-align: right;
+}
+
+td.process_power
+{
+	text-align: right;
+}
+
+td.device_util
+{
+	text-align: right;
+}
+
+tr.tunable_odd
+{
+	background-color: #E0E0E0;
+	color: black;
+}
+tr.tunable_even
+{
+	background-color: #F0f0F0;
+	color: black;
+}
+
+tr.tunable_odd_bad
+{
+	background-color: #FFE0E0;
+	color: black;
+}
+tr.tunable_even_bad
+{
+	background-color: #FFf0F0;
+	color: black;
+}
+
+tr.system_odd
+{
+	background-color: #E0E0E0;
+	color: black;
+}
+tr.system_even
+{
+	background-color: #F0f0F0;
+	color: black;
+}
+
+tr.device_odd
+{
+	background-color: #E0E0E0;
+	color: black;
+}
+tr.device_even
+{
+	background-color: #F0f0F0;
+	color: black;
+}
+
+body {
+	background-color: #eee; /* Background color */
+	color: #222;            /* Foreground color used for text */
+	font-family: Helvetica;
+	font-size: 14px;
+	margin: 0;              /* Amount of negative space around the
+                                   outside of the body */
+	padding: 0;             /* Amount of negative space around the
+                                   inside of the body */
+}
+#top {
+	background-color: #ccc;
+	border-bottom: 1px solid #666;
+	color: #222;
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px 0;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0px 1px 1px #fff;
+	background-image: -webkit-gradient(linear, left top, left bottom,
+						from(#ccc), to(#999));
+}
+
+
+#top div {
+	height: 30px;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	text-shadow: rgba(0,0,0,0.6) 0px -1px 1px;
+	line-height: 28px;
+	border-width:0px 8px 0px 8px;
+}
+#top div.nav_button {
+ display: inline;
+ cursor: pointer;
+ padding: 0.3em 0.5em;
+ margin: 0 0.2em;
+}
+
+div.pressed {
+	background-color: #000000;
+	border: 1px solid #000000;
+	color: #000000;
+	border-radius: 8px;
+}
+div.hide {
+ display: none;
+}
+</style>
+</head>
+
+<body onload='powertop.onload();'>
+<div id='top'>
+</div>
+

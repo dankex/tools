@@ -1,0 +1,635 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Intel Corporation
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# rajeshpro <rajeshdey606@gmail.com>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: PowerTOP\n"
+"Report-Msgid-Bugs-To: \"powertop@lists.01.org\"\n"
+"POT-Creation-Date: 2013-11-04 10:45-0800\n"
+"PO-Revision-Date: 2013-11-05 08:40+0000\n"
+"Last-Translator: Margie Foster <margie@linux.intel.com>\n"
+"Language-Team: Bengali (India) (http://www.transifex.com/projects/p/PowerTOP/language/bn_IN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: bn_IN\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/parameters/persistent.cpp:46 src/parameters/persistent.cpp:140
+msgid "Cannot save to file"
+msgstr ""
+
+#: src/parameters/persistent.cpp:78 src/parameters/persistent.cpp:165
+msgid "Cannot load from file"
+msgstr ""
+
+#: src/parameters/persistent.cpp:123
+#, c-format
+msgid "Loaded %i prior measurements\n"
+msgstr "লোডকৃত %i আগের পরিমাপ\n\n"
+
+#: src/display.cpp:70
+msgid "Overview"
+msgstr "পরিদর্শন"
+
+#: src/display.cpp:71
+msgid "Idle stats"
+msgstr "অলস পরিসংখ্যান"
+
+#: src/display.cpp:72
+msgid "Frequency stats"
+msgstr "কম্পাংক পরিসংখ্যান"
+
+#: src/display.cpp:73
+msgid "Device stats"
+msgstr "ডিভাইস পরিসংখ্যান"
+
+#: src/display.cpp:130
+msgid "Exit"
+msgstr "প্রস্থান"
+
+#: src/cpu/cpu_core.cpp:37 src/cpu/cpu_core.cpp:93 src/cpu/intel_cpus.cpp:245
+#, c-format
+msgid "  Core"
+msgstr ""
+
+#: src/cpu/cpu.cpp:80
+#, c-format
+msgid "cpu package %i"
+msgstr "সিপিইউ প্যাকেজ %i"
+
+#: src/cpu/cpu.cpp:81
+msgid "cpu package"
+msgstr "cpu 'র প্যাকেজ"
+
+#: src/cpu/cpu.cpp:84
+#, c-format
+msgid "cpu rapl package %i"
+msgstr ""
+
+#: src/cpu/cpu.cpp:85
+msgid "cpu rapl package"
+msgstr ""
+
+#: src/cpu/cpu.cpp:89
+#, c-format
+msgid "dram rapl package %i"
+msgstr ""
+
+#: src/cpu/cpu.cpp:90
+msgid "dram rapl package"
+msgstr ""
+
+#: src/cpu/cpu.cpp:459 src/cpu/cpu.cpp:586
+#, c-format
+msgid "Package %i"
+msgstr ""
+
+#: src/cpu/cpu.cpp:491 src/cpu/cpu.cpp:606
+#, c-format
+msgid "Core %i"
+msgstr ""
+
+#: src/cpu/cpu.cpp:493
+#, c-format
+msgid "GPU %i"
+msgstr ""
+
+#: src/cpu/cpu.cpp:515 src/cpu/cpu.cpp:627
+#, c-format
+msgid "CPU %i"
+msgstr ""
+
+#: src/cpu/cpu.cpp:807
+#, c-format
+msgid "cpu_idle event returned no state?\n"
+msgstr "cpu_idle ইভেন্ট  কোনও অবস্থাষ় ফিরে আসেনি?\n\n"
+
+#: src/cpu/cpu.cpp:822
+#, c-format
+msgid "power or cpu_frequency event returned no state?\n"
+msgstr ""
+
+#: src/cpu/cpu_linux.cpp:79
+msgid "C0 polling"
+msgstr "C0 polling"
+
+#: src/cpu/cpu_linux.cpp:240 src/cpu/cpu_linux.cpp:339
+#: src/cpu/intel_cpus.cpp:521
+#, c-format
+msgid " CPU %i"
+msgstr ""
+
+#: src/cpu/cpu_package.cpp:47
+#, c-format
+msgid "Package"
+msgstr ""
+
+#: src/cpu/cpu_package.cpp:105 src/cpu/intel_cpus.cpp:297
+#, c-format
+msgid "  Package"
+msgstr ""
+
+#: src/cpu/intel_cpus.cpp:81
+#, c-format
+msgid "read_msr cpu%d 0x%llx : "
+msgstr ""
+
+#: src/cpu/intel_cpus.cpp:445
+msgid "C0 active"
+msgstr "C0 সক্রিয়"
+
+#: src/cpu/intel_cpus.cpp:504
+#, c-format
+msgid "Actual"
+msgstr "প্রকৃত"
+
+#: src/lib.cpp:286
+#, c-format
+msgid "%7sW"
+msgstr "%7sW"
+
+#: src/lib.cpp:289
+#, c-format
+msgid "    0 mW"
+msgstr "      0 mW"
+
+#: src/lib.cpp:408
+msgid "PS/2 Touchpad / Keyboard / Mouse"
+msgstr "PS / 2, টাচপ্যাড / কীবোর্ড / মাউস"
+
+#: src/lib.cpp:409
+msgid "SATA controller"
+msgstr "SATA নিয়ন্ত্রণ"
+
+#: src/lib.cpp:410
+msgid "Intel built in USB hub"
+msgstr "ইন্টেল নির্মিত USB হাব"
+
+#: src/lib.cpp:482 src/lib.cpp:514
+#, c-format
+msgid ""
+"Model-specific registers (MSR)\t\t\t not found (try enabling "
+"CONFIG_X86_MSR).\n"
+msgstr ""
+
+#: src/process/do_process.cpp:817
+#, c-format
+msgid ""
+"Estimated power: %5.1f    Measured power: %5.1f    Sum: %5.1f\n"
+"\n"
+msgstr "Estimated power: %5.1f    Measured power: %5.1f    Sum: %5.1f\n\n"
+
+#: src/process/do_process.cpp:828 src/devices/device.cpp:171
+#, c-format
+msgid "The battery reports a discharge rate of %sW\n"
+msgstr "The battery reports a discharge rate of %sW\n"
+
+#: src/process/do_process.cpp:833
+#, c-format
+msgid "The estimated remaining time is %i hours, %i minutes\n"
+msgstr "আনুমানিক অবশিষ্ট সময় হল %i ঘন্টা, %i মিনিট\n\n\n"
+
+#: src/process/do_process.cpp:841
+msgid "Summary"
+msgstr "সারাংশ"
+
+#: src/process/do_process.cpp:841 src/process/do_process.cpp:1013
+msgid "wakeups/second"
+msgstr "ওষ়েকআপস/সেকেন্ড"
+
+#: src/process/do_process.cpp:841
+msgid "GPU ops/seconds"
+msgstr "জিপিইউ ops/সেকেন্ড"
+
+#: src/process/do_process.cpp:841
+msgid "VFS ops/sec and"
+msgstr "ভিএফএস OPS / সেকেন্ড এবং"
+
+#: src/process/do_process.cpp:841 src/process/do_process.cpp:1017
+msgid "CPU use"
+msgstr "সিপিইউ-র ব্যবহার"
+
+#: src/process/do_process.cpp:845 src/process/do_process.cpp:904
+#: src/process/do_process.cpp:1023
+msgid "Power est."
+msgstr "শক্তি অনুমান"
+
+#: src/process/do_process.cpp:845 src/process/do_process.cpp:847
+#: src/process/do_process.cpp:908 src/process/do_process.cpp:1027
+msgid "Usage"
+msgstr "ব্যবহার"
+
+#: src/process/do_process.cpp:845 src/process/do_process.cpp:847
+#: src/process/do_process.cpp:1029
+msgid "Events/s"
+msgstr "ইভেন্টস / গুলি"
+
+#: src/process/do_process.cpp:845 src/process/do_process.cpp:847
+#: src/process/do_process.cpp:918 src/process/do_process.cpp:1031
+msgid "Category"
+msgstr "বিভাগ"
+
+#: src/process/do_process.cpp:845 src/process/do_process.cpp:847
+#: src/process/do_process.cpp:920 src/process/do_process.cpp:1033
+msgid "Description"
+msgstr "বিবরণ"
+
+#: src/process/do_process.cpp:899
+msgid "Overview of Software Power Consumers"
+msgstr "সফ্টওয়্যার পাওয়ার কনজিউমার্স রূপরেখা"
+
+#: src/process/do_process.cpp:910
+msgid "Wakeups/s"
+msgstr "ওষ়েকআপস/ গুলি"
+
+#: src/process/do_process.cpp:912
+msgid "GPU ops/s"
+msgstr "জিপিইউ ops/ গুলি"
+
+#: src/process/do_process.cpp:914
+msgid "Disk IO/s"
+msgstr "ডিস্ক IO / গুলি"
+
+#: src/process/do_process.cpp:916
+msgid "GFX Wakeups/s"
+msgstr "GFX ওষ়েকআপস/ গুলি"
+
+#: src/process/do_process.cpp:1010
+msgid "Power Consumption Summary"
+msgstr "বিদ্যুত ব্যবহার সারাংশ"
+
+#: src/process/do_process.cpp:1014
+msgid "GPU ops/second"
+msgstr "জিপিইউ ops/সেকেন্ড"
+
+#: src/process/do_process.cpp:1015
+msgid "VFS ops/sec"
+msgstr "VFS ops/sec"
+
+#: src/process/do_process.cpp:1016
+msgid "GFX wakes/sec and"
+msgstr "ভিএফএস OPS / সেকেন্ড "
+
+#: src/perf/perf.cpp:115
+#, c-format
+msgid ""
+"Too many open files, please increase the limit of open file descriptors.\n"
+msgstr ""
+
+#: src/perf/perf.cpp:117
+#, c-format
+msgid "PowerTOP %s needs the kernel to support the 'perf' subsystem\n"
+msgstr "PowerTOP %s 'perf' সাবসিস্টেম সমর্থন করতে কার্নেল প্রয়োজন বোধ করে\n\n"
+
+#: src/perf/perf.cpp:118
+#, c-format
+msgid "as well as support for trace points in the kernel:\n"
+msgstr "কার্নেলে ছাপ বিন্দুর জন্য সমর্থন হিসেবে যত ভাল:\n\n"
+
+#: src/devices/device.cpp:177
+#, c-format
+msgid "System baseline power is estimated at %sW\n"
+msgstr "System baseline power is estimated at %sW\n"
+
+#: src/devices/device.cpp:184
+msgid "Power est.    Usage     Device name\n"
+msgstr "বিদ্যুৎ est.   ব্যবহার    ডিভাইস নাম\n\n"
+
+#: src/devices/device.cpp:186
+msgid "              Usage     Device name\n"
+msgstr "             ব্যবহারের ডিভাইস নাম\n\n"
+
+#: src/devices/alsa.cpp:77
+#, c-format
+msgid "Audio codec %s: %s (%s)"
+msgstr "Audio codec %s: %s (%s)"
+
+#: src/devices/alsa.cpp:79 src/devices/alsa.cpp:81
+#, c-format
+msgid "Audio codec %s: %s"
+msgstr "অডিও কোডেক %s: %s"
+
+#: src/devices/runtime_pm.cpp:225
+#, c-format
+msgid "PCI Device: %s"
+msgstr "পিসিআই ডিভাইস: %s"
+
+#: src/devices/usb.cpp:49 src/devices/usb.cpp:92 src/devices/usb.cpp:94
+#, c-format
+msgid "USB device: %s"
+msgstr "ইউএসবি ডিভাইস: %s"
+
+#: src/devices/usb.cpp:90
+#, c-format
+msgid "USB device: %s (%s)"
+msgstr "ইউএসবি ডিভাইস: %s (%s)"
+
+#: src/devices/ahci.cpp:142
+#, c-format
+msgid "SATA link: %s"
+msgstr "SATA সংযোগ: %s"
+
+#: src/devices/ahci.cpp:144
+#, c-format
+msgid "SATA disk: %s"
+msgstr "SATA ডিস্ক: %s"
+
+#: src/devices/rfkill.cpp:64 src/devices/rfkill.cpp:68
+#, c-format
+msgid "Radio device: %s"
+msgstr "রেডিও ডিভাইস: %s"
+
+#: src/devices/network.cpp:176
+#, c-format
+msgid "Network interface: %s (%s)"
+msgstr "নেটওয়ার্ক ইন্টারফেস: %s (%s)"
+
+#: src/tuning/bluetooth.cpp:48
+#, c-format
+msgid "Bluetooth device interface status"
+msgstr "ব্লুটুথ ডিভাইসের ইন্টারফেস অবস্থা"
+
+#: src/tuning/cpufreq.cpp:44 src/tuning/ethernet.cpp:50
+#: src/tuning/tunable.cpp:48 src/tuning/wifi.cpp:45 src/tuning/runtime.cpp:41
+#: src/tuning/tuningusb.cpp:37 src/tuning/tuningsysfs.cpp:44
+msgid "Good"
+msgstr "ভাল"
+
+#: src/tuning/cpufreq.cpp:44 src/tuning/ethernet.cpp:50
+#: src/tuning/tunable.cpp:49 src/tuning/wifi.cpp:45 src/tuning/runtime.cpp:41
+#: src/tuning/tuningusb.cpp:37 src/tuning/tuningsysfs.cpp:44
+msgid "Bad"
+msgstr "খারাপ"
+
+#: src/tuning/cpufreq.cpp:44 src/tuning/ethernet.cpp:50
+#: src/tuning/tunable.cpp:50 src/tuning/wifi.cpp:45 src/tuning/runtime.cpp:41
+#: src/tuning/tuningusb.cpp:37 src/tuning/tuningsysfs.cpp:44
+msgid "Unknown"
+msgstr "অজানা"
+
+#: src/tuning/cpufreq.cpp:47
+#, c-format
+msgid "Using 'ondemand' cpufreq governor"
+msgstr "'ondemand' cpufreq গভর্নর ব্যবহার করছে"
+
+#: src/tuning/tuning.cpp:59
+msgid "Enable Audio codec power management"
+msgstr "অডিও কোডেকর অধিকার ব্যবস্থাপনা সক্রিয় করুন"
+
+#: src/tuning/tuning.cpp:60
+msgid "NMI watchdog should be turned off"
+msgstr "NMI পাহরাদার বন্ধ করা উচিত"
+
+#: src/tuning/tuning.cpp:61
+msgid "Power Aware CPU scheduler"
+msgstr "সিপিইউ সময়-তালিকা নির্ধারণ ব্যবস্থার বিদ্যুৎ সচেতন"
+
+#: src/tuning/tuning.cpp:62
+msgid "VM writeback timeout"
+msgstr "VM writeback  সময়সীমা"
+
+#: src/tuning/tuning.cpp:79
+msgid "Tunables"
+msgstr "সুরেলা "
+
+#: src/tuning/tuning.cpp:79
+msgid " <ESC> Exit | <Enter> Toggle tunable | <r> Window refresh"
+msgstr " <ESC> থেকে প্রস্থান করুন | <Enter> টগল করুন সুরেলা | <r> উইন্ডো রিফ্রেশ করুন"
+
+#: src/tuning/ethernet.cpp:54
+#, c-format
+msgid "Wake-on-lan status for device %s"
+msgstr "ডিভাইস %sএর জন্য  LAN অবস্থা  অন কর"
+
+#: src/tuning/wifi.cpp:48
+#, c-format
+msgid "Wireless Power Saving for interface %s"
+msgstr "Wireless Power Saving for interface %s"
+
+#: src/tuning/runtime.cpp:47
+#, c-format
+msgid "Runtime PM for %s device %s"
+msgstr "Runtime PM for %s device %s"
+
+#: src/tuning/runtime.cpp:49
+#, c-format
+msgid "%s device %s has no runtime power management"
+msgstr "%s device %s has no runtime power management"
+
+#: src/tuning/runtime.cpp:73
+#, c-format
+msgid "PCI Device %s has no runtime power management"
+msgstr "PCI Device %s has no runtime power management"
+
+#: src/tuning/runtime.cpp:75
+#, c-format
+msgid "Runtime PM for PCI Device %s"
+msgstr "পিসিআই ডিভাইস %sএর জন্য  রানটাইম  PM"
+
+#: src/tuning/tuningusb.cpp:52
+#, c-format
+msgid "Autosuspend for unknown USB device %s (%s:%s)"
+msgstr "অজানা ইউএসবি ডিভাইস %s.(%s: %s) এর জন্য Autosuspend"
+
+#: src/tuning/tuningusb.cpp:69 src/tuning/tuningusb.cpp:71
+#: src/tuning/tuningusb.cpp:73
+#, c-format
+msgid "Autosuspend for USB device %s [%s]"
+msgstr "ইউএসবি ডিভাইস %s[%s] এর জন্য Autosuspend "
+
+#: src/tuning/tuningsysfs.cpp:139
+#, c-format
+msgid "Enable SATA link power Managmenet for %s"
+msgstr ""
+
+#: src/calibrate/calibrate.cpp:236
+#, c-format
+msgid "Cannot create temp file\n"
+msgstr "সাময়িক ফাইল তৈরি করতে পারবেন না\n"
+
+#: src/calibrate/calibrate.cpp:255
+#, c-format
+msgid "Calibrating: CPU usage on %i threads\n"
+msgstr "Calibrating: CPU usage on %i threads\n"
+
+#: src/calibrate/calibrate.cpp:270
+#, c-format
+msgid "Calibrating: CPU wakeup power consumption\n"
+msgstr "Calibrating: সিপিইউ -র ওয়েকআপ ক্ষমতা গ্রহণ\n\n"
+
+#: src/calibrate/calibrate.cpp:287
+#, c-format
+msgid "Calibrating USB devices\n"
+msgstr "কেলিবেটি ইউএসবি ডিভাইস\n\n\n"
+
+#: src/calibrate/calibrate.cpp:289 src/calibrate/calibrate.cpp:306
+#: src/calibrate/calibrate.cpp:314 src/calibrate/calibrate.cpp:331
+#, c-format
+msgid ".... device %s \n"
+msgstr "  ... ডিভাইস %s\n\n\n"
+
+#: src/calibrate/calibrate.cpp:304
+#, c-format
+msgid "Calibrating radio devices\n"
+msgstr "Calibrating রেডিও ডিভাইস\n\n"
+
+#: src/calibrate/calibrate.cpp:328
+#, c-format
+msgid "Calibrating backlight\n"
+msgstr "Calibrating বেকলাইট\n\n"
+
+#: src/calibrate/calibrate.cpp:352 src/calibrate/calibrate.cpp:360
+#, c-format
+msgid "Calibrating idle\n"
+msgstr "Calibrating অলস\n\n"
+
+#: src/calibrate/calibrate.cpp:371
+#, c-format
+msgid "Calibrating: disk usage \n"
+msgstr "Calibrating: ডিস্ক ব্যবহার\n\n"
+
+#: src/calibrate/calibrate.cpp:396
+msgid "Starting PowerTOP power estimate calibration \n"
+msgstr "পাওষ়ারটপ শক্তি অনুমান ক্রমাঙ্কন শুরু\n\n"
+
+#: src/calibrate/calibrate.cpp:419
+msgid "Finishing PowerTOP power estimate calibration \n"
+msgstr "পাওষ়ারটপ শক্তি অনুমান ক্রমাঙ্কন সমাপ্তি\n\n"
+
+#: src/calibrate/calibrate.cpp:423
+#, c-format
+msgid "Parameters after calibration:\n"
+msgstr "ক্রমাঙ্কন-র পরে প্যারামিটারগুলি:\n\n"
+
+#: src/main.cpp:91
+#, c-format
+msgid "PowerTOP version"
+msgstr "পাওষ়ারটপ অনুবাদ"
+
+#: src/main.cpp:97
+msgid "Set refresh time out"
+msgstr "রিফ্রেশ সময় আউট সেট করুন"
+
+#: src/main.cpp:110
+msgid "Usage: powertop [OPTIONS]"
+msgstr "ব্যবহার: পাওষ়ারটপ  [বিকল্প]"
+
+#: src/main.cpp:111
+msgid "run in \"debug\" mode"
+msgstr "\"ডিবাগ\" মোডে চালানো"
+
+#: src/main.cpp:112
+msgid "print version information"
+msgstr "প্রিন্ট সংস্করণ সংক্রান্ত তথ্য"
+
+#: src/main.cpp:113
+msgid "runs powertop in calibration mode"
+msgstr "মোডে সঞ্চালিত "
+
+#: src/main.cpp:114
+msgid "Sets all tunable options to their GOOD setting"
+msgstr ""
+
+#: src/main.cpp:115
+msgid "[=devnode]"
+msgstr "[=ডেভনোড]"
+
+#: src/main.cpp:115
+msgid "uses an Extech Power Analyzer for measurements"
+msgstr "পরিমাপের জন্য একটি Extech পাওয়ার বিশ্লেষক ব্যবহার"
+
+#: src/main.cpp:116 src/main.cpp:117
+msgid "[=FILENAME]"
+msgstr "[=ফাইলনেইম]"
+
+#: src/main.cpp:116
+msgid "generate a html report"
+msgstr "একটি এইচটিএমএল রিপোর্ট তৈরি কর "
+
+#: src/main.cpp:117
+msgid "generate a csv report"
+msgstr "একটি csv রিপোর্ট তৈরি কর "
+
+#: src/main.cpp:118
+msgid "[=seconds]"
+msgstr "[=সেকেন্ডস]"
+
+#: src/main.cpp:118
+msgid "generate a report for 'x' seconds"
+msgstr "'x' সেকেন্ডের জন্য একটি প্রতিবেদন তৈরি করুন"
+
+#: src/main.cpp:119
+msgid "[=iterations] number of times to run each test"
+msgstr "[= পুনরাবৃত্তিও] প্রত্যেক পরীক্ষা চালাতে সময়ের সংখ্যা"
+
+#: src/main.cpp:120
+msgid "[=workload]"
+msgstr ""
+
+#: src/main.cpp:120
+msgid "file to execute for workload"
+msgstr ""
+
+#: src/main.cpp:121
+msgid "suppress stderr output"
+msgstr ""
+
+#: src/main.cpp:122
+msgid "print this help menu"
+msgstr "এই সাহায্য মেনু মুদ্রণ কর"
+
+#: src/main.cpp:124
+msgid "For more help please refer to the README"
+msgstr "আরও সাহায্যের জন্য README পড়ুন দয়া করে"
+
+#: src/main.cpp:201
+#, c-format
+msgid "Unknown issue running workload!\n"
+msgstr ""
+
+#: src/main.cpp:242
+msgid "PowerTOP is out of memory. PowerTOP is Aborting"
+msgstr "পাওষ়ারটপ মেমরি হয়ে গেছে । পাওষ়ারটপ বাতিল করছে"
+
+#: src/main.cpp:250
+#, c-format
+msgid "Preparing to take measurements\n"
+msgstr "পরিমাপ গ্রহণ করতে প্রস্তুত \n\n"
+
+#: src/main.cpp:255
+#, c-format
+msgid "Taking %d measurement(s) for a duration of %d second(s) each.\n"
+msgstr "প্রতিটি %d সেকেন্ড(গুলি) এর একটি সময়কালের জন্য %d পরিমাপ(গুলি) গ্রহণ করছে\n"
+
+#: src/main.cpp:257
+#, c-format
+msgid "Measuring workload %s.\n"
+msgstr ""
+
+#: src/main.cpp:280
+#, c-format
+msgid "PowerTOP "
+msgstr "পাওষ়ারটপ "
+
+#: src/main.cpp:281 src/main.cpp:328
+#, c-format
+msgid "exiting...\n"
+msgstr "প্রস্থান করছে...\n\n"
+
+#: src/main.cpp:327
+#, c-format
+msgid "Failed to mount debugfs!\n"
+msgstr "debugfs মাউন্ট করতে ব্যর্থ!\n\n"
+
+#: src/main.cpp:422
+#, c-format
+msgid "Quite mode failed!\n"
+msgstr ""
+
+#: src/main.cpp:472
+msgid "Leaving PowerTOP"
+msgstr "পাওষ়ারটপ বন্ধ হচেছ"
